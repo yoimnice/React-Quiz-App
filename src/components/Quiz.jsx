@@ -14,8 +14,6 @@ export default function Quiz({ apiUrl }) {
   const [completed, setCompleted] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
 
-  console.log(chosenAnswers)
-
   useEffect(() => {
     playAgain()
   }, [apiUrl])
