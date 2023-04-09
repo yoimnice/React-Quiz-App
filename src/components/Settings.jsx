@@ -31,7 +31,7 @@ export default function Settings({onSettingsChange, onDarkModeChange, darkMode})
     const handleDarkModeChange = () => {
         onDarkModeChange()
     }
-    
+
     
 /* ========================= Rendering Settings ========================= */
     
