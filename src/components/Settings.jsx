@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import settingsIcon from '../images/settings-icon.png'
+import closeIcon from '../images/close-icon.png'
 
 export default function Settings({onSettingsChange, onDarkModeChange, darkMode}) {
     
@@ -35,7 +37,7 @@ export default function Settings({onSettingsChange, onDarkModeChange, darkMode})
     
 /* ========================= Rendering Settings ========================= */
     
-    const icon = menuOpen ? "./public/close-icon.png" : "./public/settings-icon.png";
+    const icon = menuOpen ? closeIcon : settingsIcon;
     const stylingClass = menuOpen ? "settings-icon fixed" : "settings-icon";
     const iconClass = darkMode ? "icon dark-icon" : "icon";
     const containerClass = darkMode ? `${stylingClass} dark-mode` : stylingClass;
