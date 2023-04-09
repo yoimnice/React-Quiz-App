@@ -9,6 +9,8 @@ function App() {
   const [apiUrl, setApiUrl] = React.useState('https://opentdb.com/api.php?amount=5')
   const [darkMode, setDarkMode] = React.useState(false)
 
+/* ========================= Functions ========================= */
+
   function handleSettingsChange(newApiUrl){
     setApiUrl(newApiUrl)
   }
@@ -21,6 +23,8 @@ function App() {
     setReady(true)
   }
 
+/* ========================= Rendering App ========================= */
+
   return (
     <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
       <Background />
@@ -29,7 +33,9 @@ function App() {
         onSettingsChange={handleSettingsChange}
         onDarkModeChange={handleDarkModeChange}
       />
-      {ready ? <Quiz apiUrl={apiUrl} /> : <StartScreen start={startGame} />}
+      {ready ? 
+        <Quiz apiUrl={apiUrl} /> :
+        <StartScreen start={startGame} />}
     </div>
   )
 }

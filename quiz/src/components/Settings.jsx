@@ -31,11 +31,11 @@ export default function Settings({onSettingsChange, onDarkModeChange, darkMode})
     const handleDarkModeChange = () => {
         onDarkModeChange()
     }
-    
+
     
 /* ========================= Rendering Settings ========================= */
     
-    const icon = menuOpen ? "public/images/close-icon.png" : "public/images/settings-icon.png";
+    const icon = menuOpen ? "./public/images/close-icon.png" : "./public/images/settings-icon.png";
     const stylingClass = menuOpen ? "settings-icon fixed" : "settings-icon";
     const iconClass = darkMode ? "icon dark-icon" : "icon";
     const containerClass = darkMode ? `${stylingClass} dark-mode` : stylingClass;
